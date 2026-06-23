@@ -53,6 +53,22 @@ const logout = (req, res) => {
   res.json({ message: 'Logout exitoso ✅' });
 };
 
+
+// ✅ RECOVER PASSWORD (SIMULADO)
+exports.recoverPassword = (req, res) => {
+  const { email } = req.body;
+
+  const token = Math.random().toString(36).substring(2);
+
+  console.log(`Token enviado a ${email}: ${token}`);
+
+  res.json({
+    message: 'Recuperación simulada',
+    token
+  });
+};
+
+
 module.exports = {
   register,
   login,

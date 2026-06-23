@@ -1,0 +1,1 @@
+mysql -u root -p unidad2 < backup.sql
