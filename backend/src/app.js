@@ -10,9 +10,11 @@ app.use(express.json());
 // ✅ Rutas
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
+const logRoutes = require('./routes/logRoutes');
 
 app.use('/api', userRoutes);
 app.use('/api', authRoutes);
+app.use('/api', logRoutes);
 
 // ✅ Test
 app.get('/', (req, res) => {
